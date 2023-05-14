@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+
+        function show()
+        {
+            if(document.myForm.user.value=="")
+            {       
+                alert("Invalid Username");
+                document.myForm.user.focus();
+                return false;
+            }
+    
+            if(document.myForm.pass.value=="")
+            {
+                alert("Invalid Password");
+                document.myForm.user.focus();
+                return false;
+            }
+
+            if(document.myForm.mob.value=""||isNaN(document.myForm.mob.value)||document.myForm.mob.value.length!=10)
+            {
+                alert("Invalid Mobile No.");
+                document.myForm.user.focus();
+                return false;
+            }
+
+            if(document.myForm.gender[0].checked==false && document.myForm.gender[1].checked==false)
+            {
+                alert("Select Valid Gender");
+                document.myForm.user.focus();
+                return false;
+            }
+            
+
+            if(document.myForm.country.value=="select")
+            {
+                alert("Select Valid Country");
+                document.myForm.user.focus();
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+
+    <title>Form Validation</title>
+
+</head>
+
+<body>
+    <header>
+     <div class="container"></div>
+        <nav>
+            <ul>Home</ul>
+            <ul>About</ul>
+            <ul>Services</ul>
+            <ul>Contact</ul>
+        </nav>
+    </header>
+
+    <!-- Form -->
+    <div class="container">
+
+
+
+
+    <form name="myForm" onsubmit="return(show())">
+        
+        <table>
+
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="user"></td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="pass"></td>
+        </tr>
+
+        <tr>
+            <td>Contact No.</td>
+            <td><input type="number" name="mob"></td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" name="gender">Male<input type="radio" name="gender">Female</td>    
+        </tr>
+
+        <tr>
+            <td>Country</td>
+            <td>
+                <select name="country">
+                <option value="select">Select</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                </select>
+            </td>
+            
+        </tr>
+
+        <tr>
+            <td><button type="submit">Submit</button></td>
+        </tr>
+
+        
+        
+
+        </table>
+     
+
+
+    </form>
+</div>
+</body>
+</html>

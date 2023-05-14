@@ -1,0 +1,40 @@
+*
+{
+    margin: 0;
+   
+}
+
+header
+{
+    height: 50px;
+}
+.container
+{
+
+    background-image: url('th.jpg');
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    border: 2px solid red;
+}
+
+nav{
+
+    display: flex;
+    background-color: aquamarine;
+    justify-content: center;
+    
+}
+
+.conatainer li
+{
+    font-size: 50px;
+}
+
+.logo
+{
+    display: flex;
+}
+
